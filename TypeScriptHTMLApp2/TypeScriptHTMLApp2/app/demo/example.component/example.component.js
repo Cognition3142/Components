@@ -10,27 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ExceedraTextboxNumericDemoComponent = (function () {
-    function ExceedraTextboxNumericDemoComponent() {
-        this.initialSetup = {
-            value: 500.004,
-            format: 'n3',
-            min: undefined,
-            max: undefined
-        };
+var platform_browser_1 = require("@angular/platform-browser");
+var example_model_1 = require("./example.model");
+var ExampleComponent = (function () {
+    function ExampleComponent(sanitizer) {
+        this.sanitizer = sanitizer;
     }
-    ExceedraTextboxNumericDemoComponent.prototype.ngOnInit = function () {
+    ExampleComponent.prototype.ngOnInit = function () {
+        this.trustedDemoHtml = this.sanitizer.bypassSecurityTrustHtml(this.setup.demoHtml);
     };
-    return ExceedraTextboxNumericDemoComponent;
+    return ExampleComponent;
 }());
-ExceedraTextboxNumericDemoComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", example_model_1.Example)
+], ExampleComponent.prototype, "setup", void 0);
+ExampleComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'exceedra-textbox-numeric-demo',
-        templateUrl: 'textbox.numeric.demo.html',
-        styleUrls: ['textbox.numeric.demo.css']
+        selector: 'example',
+        templateUrl: 'example.component.html',
+        styleUrls: ['example.component.css'],
     }),
-    __metadata("design:paramtypes", [])
-], ExceedraTextboxNumericDemoComponent);
-exports.ExceedraTextboxNumericDemoComponent = ExceedraTextboxNumericDemoComponent;
-//# sourceMappingURL=textbox.numeric.demo.js.map
+    __metadata("design:paramtypes", [platform_browser_1.DomSanitizer])
+], ExampleComponent);
+exports.ExampleComponent = ExampleComponent;
+//# sourceMappingURL=example.component.js.map

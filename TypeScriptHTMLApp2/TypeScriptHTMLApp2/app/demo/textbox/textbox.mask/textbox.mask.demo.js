@@ -10,27 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ExceedraTextboxNumericDemoComponent = (function () {
-    function ExceedraTextboxNumericDemoComponent() {
+var ExceedraTextboxMaskDemoComponent = (function () {
+    function ExceedraTextboxMaskDemoComponent() {
         this.initialSetup = {
-            value: 500.004,
-            format: 'n3',
-            min: undefined,
-            max: undefined
+            mask: '999',
+            maskValidation: true,
+            value: '12a',
+            disabled: false
         };
     }
-    ExceedraTextboxNumericDemoComponent.prototype.ngOnInit = function () {
+    ExceedraTextboxMaskDemoComponent.prototype.ngOnInit = function () {
     };
-    return ExceedraTextboxNumericDemoComponent;
+    return ExceedraTextboxMaskDemoComponent;
 }());
-ExceedraTextboxNumericDemoComponent = __decorate([
+ExceedraTextboxMaskDemoComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'exceedra-textbox-numeric-demo',
-        templateUrl: 'textbox.numeric.demo.html',
-        styleUrls: ['textbox.numeric.demo.css']
+        selector: 'exceedra-textbox-mask-demo',
+        templateUrl: 'textbox.mask.demo.html',
+        styleUrls: ['textbox.mask.demo.css']
     }),
     __metadata("design:paramtypes", [])
-], ExceedraTextboxNumericDemoComponent);
-exports.ExceedraTextboxNumericDemoComponent = ExceedraTextboxNumericDemoComponent;
-//# sourceMappingURL=textbox.numeric.demo.js.map
+], ExceedraTextboxMaskDemoComponent);
+exports.ExceedraTextboxMaskDemoComponent = ExceedraTextboxMaskDemoComponent;
+//# sourceMappingURL=textbox.mask.demo.js.map

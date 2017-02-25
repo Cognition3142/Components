@@ -16,13 +16,19 @@ var app_component_1 = require("./app.component");
 var kendo_angular_inputs_1 = require("@progress/kendo-angular-inputs");
 /* Exceedra Components */
 var checkbox_component_1 = require("./components/checkbox.component/checkbox.component");
-var textbox_component_1 = require("./components/textbox.component/textbox.component");
+var textbox_mask_component_1 = require("./components/textbox.component/textbox.mask.component/textbox.mask.component");
 var textbox_numeric_component_1 = require("./components/textbox.component/textbox.numeric.component/textbox.numeric.component");
-var textbox_numeric_demo_1 = require("./demo/textbox/textbox.numeric/textbox.numeric.demo");
+var textbox_basic_component_1 = require("./components/textbox.component/textbox.basic.component/textbox.basic.component");
 var datepicker_component_1 = require("./components/datepicker.component/datepicker.component");
 var label_component_1 = require("./components/label.component/label.component");
 var msdropdown_component_1 = require("./components/msdropdown.component/msdropdown.component");
 var ssdropdown_component_1 = require("./components/ssdropdown.component/ssdropdown.component");
+/* Example Building Component */
+var example_component_1 = require("./demo/example.component/example.component");
+/* Exceedra Component Demos */
+var textbox_basic_demo_1 = require("./demo/textbox/textbox.basic/textbox.basic.demo");
+var textbox_numeric_demo_1 = require("./demo/textbox/textbox.numeric/textbox.numeric.demo");
+var textbox_mask_demo_1 = require("./demo/textbox/textbox.mask/textbox.mask.demo");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,13 +40,17 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             checkbox_component_1.ExceedraCheckboxComponent,
-            textbox_component_1.ExceedraTextboxComponent,
+            textbox_basic_component_1.ExceedraTextboxBasicComponent,
+            textbox_mask_component_1.ExceedraTextboxMaskComponent,
             textbox_numeric_component_1.ExceedraTextboxNumericComponent,
-            textbox_numeric_demo_1.ExceedraTextboxNumericDemoComponent,
             datepicker_component_1.ExceedraDatepickerComponent,
             label_component_1.ExceedraLabelComponent,
             msdropdown_component_1.ExceedraMSDropdownComponent,
-            ssdropdown_component_1.ExceedraSSDropdownComponent
+            ssdropdown_component_1.ExceedraSSDropdownComponent,
+            example_component_1.ExampleComponent,
+            textbox_basic_demo_1.ExceedraTextboxBasicDemoComponent,
+            textbox_numeric_demo_1.ExceedraTextboxNumericDemoComponent,
+            textbox_mask_demo_1.ExceedraTextboxMaskDemoComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })

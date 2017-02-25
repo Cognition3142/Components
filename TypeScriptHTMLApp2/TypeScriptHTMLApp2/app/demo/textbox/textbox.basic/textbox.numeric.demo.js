@@ -14,12 +14,19 @@ var ExceedraTextboxNumericDemoComponent = (function () {
     function ExceedraTextboxNumericDemoComponent() {
         this.initialSetup = {
             value: 500.004,
+            autoCorrect: true,
             format: 'n3',
             min: undefined,
             max: undefined
         };
     }
     ExceedraTextboxNumericDemoComponent.prototype.ngOnInit = function () {
+        console.log(this.initialSetup.max);
+        console.log(this.initialSetup.min);
+        if (this.initialSetup.max || this.initialSetup.min) {
+            console.log("truthy");
+            this.initialSetup.autoCorrect = true;
+        }
     };
     return ExceedraTextboxNumericDemoComponent;
 }());

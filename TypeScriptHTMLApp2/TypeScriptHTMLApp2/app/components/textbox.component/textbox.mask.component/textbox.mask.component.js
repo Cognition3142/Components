@@ -10,30 +10,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var textbox_numeric_model_1 = require("../../../models/textbox/textbox.numeric.model");
-var ExceedraTextboxNumericComponent = (function () {
-    function ExceedraTextboxNumericComponent() {
+var textbox_mask_model_1 = require("../../../models/textbox/textbox.mask.model");
+var ExceedraTextboxMaskComponent = (function () {
+    function ExceedraTextboxMaskComponent() {
     }
-    ExceedraTextboxNumericComponent.prototype.ngOnInit = function () {
-        //If min or max set, then autocorrect must be true.
-        if (this.setup.max || this.setup.min) {
-            this.autoCorrect = true;
+    ExceedraTextboxMaskComponent.prototype.ngOnInit = function () {
+        if (!this.setup.mask) {
         }
     };
-    return ExceedraTextboxNumericComponent;
+    return ExceedraTextboxMaskComponent;
 }());
 __decorate([
     core_1.Input(),
-    __metadata("design:type", textbox_numeric_model_1.TextboxNumeric)
-], ExceedraTextboxNumericComponent.prototype, "setup", void 0);
-ExceedraTextboxNumericComponent = __decorate([
+    __metadata("design:type", textbox_mask_model_1.TextboxMask)
+], ExceedraTextboxMaskComponent.prototype, "setup", void 0);
+ExceedraTextboxMaskComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'exceedra-textbox-numeric',
-        templateUrl: 'textbox.numeric.component.html',
-        styleUrls: ['textbox.numeric.component.css'],
+        selector: 'exceedra-textbox-mask',
+        templateUrl: 'textbox.mask.component.html',
+        styleUrls: ['textbox.mask.component.css'],
     }),
     __metadata("design:paramtypes", [])
-], ExceedraTextboxNumericComponent);
-exports.ExceedraTextboxNumericComponent = ExceedraTextboxNumericComponent;
-//# sourceMappingURL=textbox.numeric.component.js.map
+], ExceedraTextboxMaskComponent);
+exports.ExceedraTextboxMaskComponent = ExceedraTextboxMaskComponent;
+//# sourceMappingURL=textbox.mask.component.js.map

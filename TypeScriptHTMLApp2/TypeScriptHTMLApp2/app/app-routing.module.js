@@ -9,17 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var checkbox_component_1 = require("./components/checkbox.component/checkbox.component");
-var textbox_component_1 = require("./components/textbox.component/textbox.component");
 var datepicker_component_1 = require("./components/datepicker.component/datepicker.component");
 var label_component_1 = require("./components/label.component/label.component");
 var msdropdown_component_1 = require("./components/msdropdown.component/msdropdown.component");
 var ssdropdown_component_1 = require("./components/ssdropdown.component/ssdropdown.component");
-//import { ExceedraTextboxNumericComponent } from './components/textbox.component/textbox.numeric.component/textbox.numeric.component';
+var textbox_basic_demo_1 = require("./demo/textbox/textbox.basic/textbox.basic.demo");
 var textbox_numeric_demo_1 = require("./demo/textbox/textbox.numeric/textbox.numeric.demo");
+var textbox_mask_demo_1 = require("./demo/textbox/textbox.mask/textbox.mask.demo");
 var routes = [
-    { path: '', redirectTo: '/textbox', pathMatch: 'full' },
-    { path: 'textbox', component: textbox_component_1.ExceedraTextboxComponent },
-    //{ path: 'textboxnumeric', component: ExceedraTextboxNumericComponent },
+    { path: '', redirectTo: '/textboxbasic', pathMatch: 'full' },
+    { path: 'textboxbasic', component: textbox_basic_demo_1.ExceedraTextboxBasicDemoComponent },
+    { path: 'textboxmask', component: textbox_mask_demo_1.ExceedraTextboxMaskDemoComponent },
     { path: 'textboxnumeric', component: textbox_numeric_demo_1.ExceedraTextboxNumericDemoComponent },
     { path: 'label', component: label_component_1.ExceedraLabelComponent },
     { path: 'datepicker', component: datepicker_component_1.ExceedraDatepickerComponent },

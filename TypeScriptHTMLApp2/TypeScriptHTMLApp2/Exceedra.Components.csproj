@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -33,15 +33,23 @@
     <Content Include="app\components\msdropdown.component\msdropdown.component.html" />
     <Content Include="app\components\ssdropdown.component\ssdropdown.component.css" />
     <Content Include="app\components\ssdropdown.component\ssdropdown.component.html" />
+    <Content Include="app\components\textbox.component\textbox.basic.component\textbox.basic.component.css" />
+    <Content Include="app\components\textbox.component\textbox.basic.component\textbox.basic.component.html" />
+    <Content Include="app\components\textbox.component\textbox.mask.component\textbox.mask.component.css" />
+    <Content Include="app\components\textbox.component\textbox.mask.component\textbox.mask.component.html" />
     <Content Include="app\components\textbox.component\textbox.numeric.component\textbox.numeric.component.css" />
     <Content Include="app\components\textbox.component\textbox.numeric.component\textbox.numeric.component.html" />
+    <Content Include="app\demo\example.component\example.component.css" />
+    <Content Include="app\demo\example.component\example.component.html" />
+    <Content Include="app\demo\textbox\textbox.basic\textbox.basic.demo.css" />
+    <Content Include="app\demo\textbox\textbox.basic\textbox.basic.demo.html" />
+    <Content Include="app\demo\textbox\textbox.mask\textbox.mask.demo.css" />
+    <Content Include="app\demo\textbox\textbox.mask\textbox.mask.demo.html" />
     <Content Include="app\demo\textbox\textbox.numeric\textbox.numeric.demo.css" />
     <Content Include="app\demo\textbox\textbox.numeric\textbox.numeric.demo.html" />
     <Content Include="assets\img\exceedra_graph.png" />
     <Content Include="styles.css" />
     <Content Include="app\app.component.html" />
-    <Content Include="app\components\textbox.component\textbox.component.css" />
-    <Content Include="app\components\textbox.component\textbox.component.html" />
     <Content Include="index.html" />
     <Content Include="systemjs.config.js" />
     <Content Include="web.config" />
@@ -55,10 +63,17 @@
     <TypeScriptCompile Include="app\components\label.component\label.component.ts" />
     <TypeScriptCompile Include="app\components\msdropdown.component\msdropdown.component.ts" />
     <TypeScriptCompile Include="app\components\ssdropdown.component\ssdropdown.component.ts" />
-    <TypeScriptCompile Include="app\components\textbox.component\textbox.component.ts" />
+    <TypeScriptCompile Include="app\components\textbox.component\textbox.basic.component\textbox.basic.component.ts" />
+    <TypeScriptCompile Include="app\components\textbox.component\textbox.mask.component\textbox.mask.component.ts" />
     <TypeScriptCompile Include="app\components\textbox.component\textbox.numeric.component\textbox.numeric.component.ts" />
+    <TypeScriptCompile Include="app\demo\example.component\example.component.ts" />
+    <TypeScriptCompile Include="app\demo\example.component\example.model.ts" />
+    <TypeScriptCompile Include="app\demo\textbox\textbox.basic\textbox.basic.demo.ts" />
+    <TypeScriptCompile Include="app\demo\textbox\textbox.mask\textbox.mask.demo.ts" />
     <TypeScriptCompile Include="app\demo\textbox\textbox.numeric\textbox.numeric.demo.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\models\textbox\textbox.basic.model.ts" />
+    <TypeScriptCompile Include="app\models\textbox\textbox.mask.model.ts" />
     <TypeScriptCompile Include="app\models\textbox\textbox.numeric.model.ts" />
   </ItemGroup>
   <ItemGroup>

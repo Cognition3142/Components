@@ -8,5 +8,4 @@
 })
 
 export class AppComponent {
-    pageTitle: string = "Hello World!";
 }

@@ -14,21 +14,18 @@ export class ExceedraTextboxNumericComponent implements OnInit {
     @Input()
     setup: TextboxNumeric;
 
-    public value: number = 5;
-    public format: string = 'c2';
-    public min: number;
-    public max: number;
-    public autoCorrect: boolean; //True if min and max set.
+    //Allows the control to override user input. True if min or max set.
+    public autoCorrect: boolean; 
 
     constructor() { }
 
     ngOnInit(): void {
-        //this.max = 6;
-        this.min = 3;
 
-        this.autoCorrect = true;
+        //If min or max set, then autocorrect must be true.
+        if (this.setup.max || this.setup.min) {
+            this.autoCorrect = true;
+        }
 
-        console.log(this.setup);
     }
 
 }

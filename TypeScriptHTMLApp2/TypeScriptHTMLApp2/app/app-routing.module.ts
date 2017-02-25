@@ -2,19 +2,20 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { ExceedraCheckboxComponent } from './components/checkbox.component/checkbox.component';
-import { ExceedraTextboxComponent } from './components/textbox.component/textbox.component';
 import { ExceedraDatepickerComponent } from './components/datepicker.component/datepicker.component';
 import { ExceedraLabelComponent } from './components/label.component/label.component';
 import { ExceedraMSDropdownComponent } from './components/msdropdown.component/msdropdown.component';
 import { ExceedraSSDropdownComponent } from './components/ssdropdown.component/ssdropdown.component';
-//import { ExceedraTextboxNumericComponent } from './components/textbox.component/textbox.numeric.component/textbox.numeric.component';
+
+import { ExceedraTextboxBasicDemoComponent } from './demo/textbox/textbox.basic/textbox.basic.demo';
 import { ExceedraTextboxNumericDemoComponent } from './demo/textbox/textbox.numeric/textbox.numeric.demo';
+import { ExceedraTextboxMaskDemoComponent } from './demo/textbox/textbox.mask/textbox.mask.demo';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: '/textbox', pathMatch: 'full' },
-    { path: 'textbox', component: ExceedraTextboxComponent },
-    //{ path: 'textboxnumeric', component: ExceedraTextboxNumericComponent },
+    { path: '', redirectTo: '/textboxbasic', pathMatch: 'full' },
+    { path: 'textboxbasic', component: ExceedraTextboxBasicDemoComponent },
+    { path: 'textboxmask', component: ExceedraTextboxMaskDemoComponent },
     { path: 'textboxnumeric', component: ExceedraTextboxNumericDemoComponent },
     { path: 'label', component: ExceedraLabelComponent },
     { path: 'datepicker', component: ExceedraDatepickerComponent },
