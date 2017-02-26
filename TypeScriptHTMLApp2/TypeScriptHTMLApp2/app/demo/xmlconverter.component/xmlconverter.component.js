@@ -10,29 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var example_model_1 = require("./example.model");
-var ExampleComponent = (function () {
-    function ExampleComponent(sanitizer) {
-        this.sanitizer = sanitizer;
+var xmlconverter_model_1 = require("./xmlconverter.model");
+var XmlCoverterComponent = (function () {
+    function XmlCoverterComponent() {
     }
-    ExampleComponent.prototype.ngOnInit = function () {
-        this.trustedDemoHtml = this.sanitizer.bypassSecurityTrustHtml(this.setup.demoHtml);
+    XmlCoverterComponent.prototype.ngOnInit = function () {
     };
-    return ExampleComponent;
+    return XmlCoverterComponent;
 }());
 __decorate([
     core_1.Input(),
-    __metadata("design:type", example_model_1.Example)
-], ExampleComponent.prototype, "setup", void 0);
-ExampleComponent = __decorate([
+    __metadata("design:type", xmlconverter_model_1.XmlModel)
+], XmlCoverterComponent.prototype, "setup", void 0);
+XmlCoverterComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'example',
-        templateUrl: 'example.component.html',
-        styleUrls: ['example.component.css'],
+        selector: 'xml-converter',
+        templateUrl: 'xmlconverter.component.html',
+        styleUrls: ['xmlconverter.component.css']
     }),
-    __metadata("design:paramtypes", [platform_browser_1.DomSanitizer])
-], ExampleComponent);
-exports.ExampleComponent = ExampleComponent;
-//# sourceMappingURL=example.component.js.map
+    __metadata("design:paramtypes", [])
+], XmlCoverterComponent);
+exports.XmlCoverterComponent = XmlCoverterComponent;
+//# sourceMappingURL=xmlconverter.component.js.map

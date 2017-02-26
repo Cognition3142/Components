@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 
-import { Example } from '../../../demo/example.component/example.model';
+import { XmlModel } from '../../../demo/xmlconverter.component/xmlconverter.model';
 import { TextboxBasic } from '../../../models/textbox/textbox.basic.model';
 
 
@@ -13,14 +13,13 @@ import { TextboxBasic } from '../../../models/textbox/textbox.basic.model';
 
 export class ExceedraTextboxBasicDemoComponent implements OnInit {
 
-    demoOneInitialSetup: TextboxBasic = {
+    demoOneModelInput: TextboxBasic = {
         value: "ABCDEFG"
     };
 
-    initialSetup: Example = {
+    demoOneXmlIn: XmlModel = {
         xml: "XML Here",
         json: "JSON Here",
-        demoHtml: "<exceedra-textbox-basic [setup]=\"demoOneInitialSetup\"></exceedra-textbox-basic>"
     }
 
     constructor() { }

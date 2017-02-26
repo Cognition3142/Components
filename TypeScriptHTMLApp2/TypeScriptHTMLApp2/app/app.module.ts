@@ -21,7 +21,7 @@ import { ExceedraMSDropdownComponent } from './components/msdropdown.component/m
 import { ExceedraSSDropdownComponent } from './components/ssdropdown.component/ssdropdown.component';
 
 /* Example Building Component */
-import { ExampleComponent } from './demo/example.component/example.component';
+import { XmlCoverterComponent } from './demo/xmlconverter.component/xmlconverter.component';
 
 /* Exceedra Component Demos */
 import { ExceedraTextboxBasicDemoComponent } from './demo/textbox/textbox.basic/textbox.basic.demo';
@@ -43,12 +43,13 @@ import { ExceedraTextboxMaskDemoComponent } from './demo/textbox/textbox.mask/te
         ExceedraMSDropdownComponent,
         ExceedraSSDropdownComponent,
 
-        ExampleComponent,
+        XmlCoverterComponent,
 
         ExceedraTextboxBasicDemoComponent,
         ExceedraTextboxNumericDemoComponent,
         ExceedraTextboxMaskDemoComponent
     ],
+    entryComponents: [ExceedraTextboxBasicComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

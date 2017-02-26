@@ -12,13 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ExceedraTextboxBasicDemoComponent = (function () {
     function ExceedraTextboxBasicDemoComponent() {
-        this.demoOneInitialSetup = {
+        this.demoOneModelInput = {
             value: "ABCDEFG"
         };
-        this.initialSetup = {
+        this.demoOneXmlIn = {
             xml: "XML Here",
             json: "JSON Here",
-            demoHtml: "<exceedra-textbox-basic [setup]=\"demoOneInitialSetup\"></exceedra-textbox-basic>"
         };
     }
     ExceedraTextboxBasicDemoComponent.prototype.ngOnInit = function () {

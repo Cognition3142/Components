@@ -24,7 +24,7 @@ var label_component_1 = require("./components/label.component/label.component");
 var msdropdown_component_1 = require("./components/msdropdown.component/msdropdown.component");
 var ssdropdown_component_1 = require("./components/ssdropdown.component/ssdropdown.component");
 /* Example Building Component */
-var example_component_1 = require("./demo/example.component/example.component");
+var xmlconverter_component_1 = require("./demo/xmlconverter.component/xmlconverter.component");
 /* Exceedra Component Demos */
 var textbox_basic_demo_1 = require("./demo/textbox/textbox.basic/textbox.basic.demo");
 var textbox_numeric_demo_1 = require("./demo/textbox/textbox.numeric/textbox.numeric.demo");
@@ -47,11 +47,12 @@ AppModule = __decorate([
             label_component_1.ExceedraLabelComponent,
             msdropdown_component_1.ExceedraMSDropdownComponent,
             ssdropdown_component_1.ExceedraSSDropdownComponent,
-            example_component_1.ExampleComponent,
+            xmlconverter_component_1.XmlCoverterComponent,
             textbox_basic_demo_1.ExceedraTextboxBasicDemoComponent,
             textbox_numeric_demo_1.ExceedraTextboxNumericDemoComponent,
             textbox_mask_demo_1.ExceedraTextboxMaskDemoComponent
         ],
+        entryComponents: [textbox_basic_component_1.ExceedraTextboxBasicComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

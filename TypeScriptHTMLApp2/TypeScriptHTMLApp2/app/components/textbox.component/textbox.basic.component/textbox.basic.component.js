@@ -13,6 +13,9 @@ var core_1 = require("@angular/core");
 var textbox_basic_model_1 = require("../../../models/textbox/textbox.basic.model");
 var ExceedraTextboxBasicComponent = (function () {
     function ExceedraTextboxBasicComponent() {
+        this.setup = {
+            value: ""
+        };
     }
     ExceedraTextboxBasicComponent.prototype.ngOnInit = function () {
     };

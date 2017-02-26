@@ -12,7 +12,9 @@ import {TextboxBasic} from '../../../models/textbox/textbox.basic.model';
 export class ExceedraTextboxBasicComponent implements OnInit {
 
     @Input()
-    setup: TextboxBasic;
+    setup: TextboxBasic = {
+        value: ""
+    };
 
     constructor() { }
 
