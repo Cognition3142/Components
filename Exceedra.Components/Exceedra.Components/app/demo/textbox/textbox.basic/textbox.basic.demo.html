@@ -1,8 +1,8 @@
 ﻿<h2>TEXTBOX BASIC COMPONENT DEMO</h2>
-<h3>Markdown Here...</h3>
 
-<h3>XML to JSON Here...</h3>
+<h5>This will be some markdown describing the component + example.</h5>
+
 <xml-converter [setup]="demoOneXmlIn"></xml-converter>
 
-<h3>Component Here...</h3>
-<exceedra-textbox-basic [setup]="demoOneModelInput"></exceedra-textbox-basic>
+<h3>Component Using The JSON Out Here...</h3>
+<exceedra-textbox-basic [setup]="demoOneModelInput" (onJsonOutChange)="onJsonOutChange($event)"></exceedra-textbox-basic>

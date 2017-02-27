@@ -1,6 +1,15 @@
-﻿<h3>EXAMPLE</h3>
+﻿<div class="fill-area flexbox-item-grow panel-two">
+    <div class="inner-panel">
+        <h3 class="panel-header">XML IN</h3>
+        <textarea class="panel-textarea" [(ngModel)]='setup.xml'></textarea>
+        <button>Manual Convert</button>
+    </div>
+    <div class="inner-panel">
+        <h3 class="panel-header">JSON OUT</h3>
+        <textarea class="panel-textarea" [(ngModel)]='setup.json'></textarea>
+        <button (click)="manualOutput()">Manual Output</button>
+    </div>
+</div>
 
-<h3>XML IN</h3>
-<h4>{{setup.xml}}</h4>
-<h3>JSON OUT</h3>
-<h4>{{setup.json}}</h4>
+
+

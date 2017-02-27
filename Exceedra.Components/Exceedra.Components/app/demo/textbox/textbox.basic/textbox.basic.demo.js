@@ -20,6 +20,9 @@ var ExceedraTextboxBasicDemoComponent = (function () {
             json: "JSON Here",
         };
     }
+    ExceedraTextboxBasicDemoComponent.prototype.onJsonOutChange = function (jsonOut) {
+        console.log(jsonOut);
+    };
     ExceedraTextboxBasicDemoComponent.prototype.ngOnInit = function () {
     };
     return ExceedraTextboxBasicDemoComponent;

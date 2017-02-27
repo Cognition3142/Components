@@ -22,6 +22,10 @@ export class ExceedraTextboxBasicDemoComponent implements OnInit {
         json: "JSON Here",
     }
 
+    onJsonOutChange(jsonOut: string) {
+        console.log(jsonOut);
+    }
+
     constructor() { }
 
     ngOnInit(): void {

@@ -1,4 +1,4 @@
-﻿import { Component, OnInit, Input  } from '@angular/core';
+﻿import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 
 import { XmlModel } from './xmlconverter.model';
 
@@ -16,11 +16,19 @@ export class XmlCoverterComponent implements OnInit {
 
     @Input()
     setup: XmlModel;
+
+    @Output() onJsonOutChange = new EventEmitter<string>();
     
+    //jsonOut: string = "{'TestKey': 'TestObject'}";
+
     constructor() { }
 
     ngOnInit(): void {
-
+        //TODO: Push the xmlModel.xml value to our webservice for conversion to JSON.
     }
-
+    
+    manualOutput() {
+        console.log("Starting manual output...");
+        this.onJsonOutChange.emit(this.setup.json);
+    }
 }
