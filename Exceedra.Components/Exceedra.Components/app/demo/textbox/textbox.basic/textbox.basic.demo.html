@@ -2,7 +2,9 @@
 
 <h5>This will be some markdown describing the component + example.</h5>
 
-<xml-converter [setup]="demoOneXmlIn"></xml-converter>
+<xml-converter [xmlIn]="demoOneXmlIn" [jsonOut]="demoOneJsonOut" (jsonOutput)="jsonOutChange($event)"></xml-converter>
 
 <h3>Component Using The JSON Out Here...</h3>
-<exceedra-textbox-basic [setup]="demoOneModelInput" (onJsonOutChange)="onJsonOutChange($event)"></exceedra-textbox-basic>
+<exceedra-textbox-basic [setup]="demoOneModelInput"></exceedra-textbox-basic>
+
+

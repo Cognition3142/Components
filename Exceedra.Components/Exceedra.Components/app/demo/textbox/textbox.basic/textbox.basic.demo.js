@@ -15,13 +15,22 @@ var ExceedraTextboxBasicDemoComponent = (function () {
         this.demoOneModelInput = {
             value: "ABCDEFG"
         };
-        this.demoOneXmlIn = {
-            xml: "XML Here",
-            json: "JSON Here",
-        };
+        this.demoOneXmlIn = 'This is the xml in...';
+        this.demoOneJsonOut = '{ "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }';
     }
-    ExceedraTextboxBasicDemoComponent.prototype.onJsonOutChange = function (jsonOut) {
-        console.log(jsonOut);
+    //jsonOutChange(event: string) {
+    //    console.log("Got json out:");
+    //    console.log(event);
+    //}
+    ExceedraTextboxBasicDemoComponent.prototype.jsonOutChange = function (event) {
+        console.log("Got json out: " + event);
+        try {
+            this.demoOneModelInput = JSON.parse(event);
+        }
+        catch (e) {
+            console.log("JSON Parse Error:");
+            console.log(e);
+        }
     };
     ExceedraTextboxBasicDemoComponent.prototype.ngOnInit = function () {
     };

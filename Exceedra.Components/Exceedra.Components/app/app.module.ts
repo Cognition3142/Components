@@ -49,7 +49,6 @@ import { ExceedraTextboxMaskDemoComponent } from './demo/textbox/textbox.mask/te
         ExceedraTextboxNumericDemoComponent,
         ExceedraTextboxMaskDemoComponent
     ],
-    entryComponents: [ExceedraTextboxBasicComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

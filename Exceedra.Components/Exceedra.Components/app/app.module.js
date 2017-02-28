@@ -52,7 +52,6 @@ AppModule = __decorate([
             textbox_numeric_demo_1.ExceedraTextboxNumericDemoComponent,
             textbox_mask_demo_1.ExceedraTextboxMaskDemoComponent
         ],
-        entryComponents: [textbox_basic_component_1.ExceedraTextboxBasicComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
