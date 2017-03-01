@@ -10,8 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-//import { XmlModel } from './xmlconverter.model';
-//import { ExceedraTextboxBasicComponent } from '../../components/textbox.component/textbox.basic.component/textbox.basic.component';
 var XmlCoverterComponent = (function () {
     function XmlCoverterComponent() {
         this.jsonOutput = new core_1.EventEmitter();
@@ -20,7 +18,7 @@ var XmlCoverterComponent = (function () {
         this.jsonOutput.emit(this.jsonOut);
     };
     XmlCoverterComponent.prototype.ngOnInit = function () {
-        //TODO: Push the xmlModel.xml value to our webservice for conversion to JSON.
+        //TODO: Push the xmlIn value to our webservice for conversion to JSON.
     };
     return XmlCoverterComponent;
 }());

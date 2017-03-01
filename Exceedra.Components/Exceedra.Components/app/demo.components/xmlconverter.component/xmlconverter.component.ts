@@ -1,10 +1,5 @@
 ﻿import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 
-//import { XmlModel } from './xmlconverter.model';
-
-//import { ExceedraTextboxBasicComponent } from '../../components/textbox.component/textbox.basic.component/textbox.basic.component';
-
-
 @Component({
     moduleId: module.id,
     selector: 'xml-converter',
@@ -32,7 +27,7 @@ export class XmlCoverterComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        //TODO: Push the xmlModel.xml value to our webservice for conversion to JSON.
+        //TODO: Push the xmlIn value to our webservice for conversion to JSON.
 
     }
     

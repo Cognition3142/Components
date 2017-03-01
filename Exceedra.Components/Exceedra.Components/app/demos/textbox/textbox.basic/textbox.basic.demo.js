@@ -5,23 +5,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ExceedraTextboxBasicDemoComponent = (function () {
     function ExceedraTextboxBasicDemoComponent() {
+        this.bio = "This is the most simple of textboxes. It accepts any input and has no validation.";
+        /* Demo one... */
+        this.demoOneMarkdownString = "### Demo One - Basic\n---\nHere is a simple demo displaying the JSON shape required for a plain textbox.   \nModify the value in the JSON and hit Manual Output to see the textbox update.";
+        this.demoOneXmlIn = 'This is the xml in...';
+        this.demoOneJsonOut = '{ "value": "ABCDEFG" }';
         this.demoOneModelInput = {
             value: "ABCDEFG"
         };
-        this.demoOneXmlIn = 'This is the xml in...';
-        this.demoOneJsonOut = '{ "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }';
+        /* Demo two... */
     }
-    //jsonOutChange(event: string) {
-    //    console.log("Got json out:");
-    //    console.log(event);
-    //}
     ExceedraTextboxBasicDemoComponent.prototype.jsonOutChange = function (event) {
         console.log("Got json out: " + event);
         try {
@@ -32,8 +29,6 @@ var ExceedraTextboxBasicDemoComponent = (function () {
             console.log(e);
         }
     };
-    ExceedraTextboxBasicDemoComponent.prototype.ngOnInit = function () {
-    };
     return ExceedraTextboxBasicDemoComponent;
 }());
 ExceedraTextboxBasicDemoComponent = __decorate([
@@ -42,8 +37,7 @@ ExceedraTextboxBasicDemoComponent = __decorate([
         selector: 'exceedra-textbox-basic-demo',
         templateUrl: 'textbox.basic.demo.html',
         styleUrls: ['textbox.basic.demo.css']
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], ExceedraTextboxBasicDemoComponent);
 exports.ExceedraTextboxBasicDemoComponent = ExceedraTextboxBasicDemoComponent;
 //# sourceMappingURL=textbox.basic.demo.js.map

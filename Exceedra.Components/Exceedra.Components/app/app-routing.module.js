@@ -13,9 +13,9 @@ var datepicker_component_1 = require("./components/datepicker.component/datepick
 var label_component_1 = require("./components/label.component/label.component");
 var msdropdown_component_1 = require("./components/msdropdown.component/msdropdown.component");
 var ssdropdown_component_1 = require("./components/ssdropdown.component/ssdropdown.component");
-var textbox_basic_demo_1 = require("./demo/textbox/textbox.basic/textbox.basic.demo");
-var textbox_numeric_demo_1 = require("./demo/textbox/textbox.numeric/textbox.numeric.demo");
-var textbox_mask_demo_1 = require("./demo/textbox/textbox.mask/textbox.mask.demo");
+var textbox_basic_demo_1 = require("./demos/textbox/textbox.basic/textbox.basic.demo");
+var textbox_numeric_demo_1 = require("./demos/textbox/textbox.numeric/textbox.numeric.demo");
+var textbox_mask_demo_1 = require("./demos/textbox/textbox.mask/textbox.mask.demo");
 var routes = [
     { path: '', redirectTo: '/textboxbasic', pathMatch: 'full' },
     { path: 'textboxbasic', component: textbox_basic_demo_1.ExceedraTextboxBasicDemoComponent },

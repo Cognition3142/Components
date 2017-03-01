@@ -23,12 +23,13 @@ var datepicker_component_1 = require("./components/datepicker.component/datepick
 var label_component_1 = require("./components/label.component/label.component");
 var msdropdown_component_1 = require("./components/msdropdown.component/msdropdown.component");
 var ssdropdown_component_1 = require("./components/ssdropdown.component/ssdropdown.component");
-/* Example Building Component */
-var xmlconverter_component_1 = require("./demo/xmlconverter.component/xmlconverter.component");
+/* Demo Components */
+var xmlconverter_component_1 = require("./demo.components/xmlconverter.component/xmlconverter.component");
+var markdown_component_1 = require("./demo.components/markdown.component/markdown.component");
 /* Exceedra Component Demos */
-var textbox_basic_demo_1 = require("./demo/textbox/textbox.basic/textbox.basic.demo");
-var textbox_numeric_demo_1 = require("./demo/textbox/textbox.numeric/textbox.numeric.demo");
-var textbox_mask_demo_1 = require("./demo/textbox/textbox.mask/textbox.mask.demo");
+var textbox_basic_demo_1 = require("./demos/textbox/textbox.basic/textbox.basic.demo");
+var textbox_numeric_demo_1 = require("./demos/textbox/textbox.numeric/textbox.numeric.demo");
+var textbox_mask_demo_1 = require("./demos/textbox/textbox.mask/textbox.mask.demo");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -48,6 +49,7 @@ AppModule = __decorate([
             msdropdown_component_1.ExceedraMSDropdownComponent,
             ssdropdown_component_1.ExceedraSSDropdownComponent,
             xmlconverter_component_1.XmlCoverterComponent,
+            markdown_component_1.MarkdownComponent,
             textbox_basic_demo_1.ExceedraTextboxBasicDemoComponent,
             textbox_numeric_demo_1.ExceedraTextboxNumericDemoComponent,
             textbox_mask_demo_1.ExceedraTextboxMaskDemoComponent

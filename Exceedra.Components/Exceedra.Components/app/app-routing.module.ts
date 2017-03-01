@@ -7,9 +7,9 @@ import { ExceedraLabelComponent } from './components/label.component/label.compo
 import { ExceedraMSDropdownComponent } from './components/msdropdown.component/msdropdown.component';
 import { ExceedraSSDropdownComponent } from './components/ssdropdown.component/ssdropdown.component';
 
-import { ExceedraTextboxBasicDemoComponent } from './demo/textbox/textbox.basic/textbox.basic.demo';
-import { ExceedraTextboxNumericDemoComponent } from './demo/textbox/textbox.numeric/textbox.numeric.demo';
-import { ExceedraTextboxMaskDemoComponent } from './demo/textbox/textbox.mask/textbox.mask.demo';
+import { ExceedraTextboxBasicDemoComponent } from './demos/textbox/textbox.basic/textbox.basic.demo';
+import { ExceedraTextboxNumericDemoComponent } from './demos/textbox/textbox.numeric/textbox.numeric.demo';
+import { ExceedraTextboxMaskDemoComponent } from './demos/textbox/textbox.mask/textbox.mask.demo';
 
 
 const routes: Routes = [

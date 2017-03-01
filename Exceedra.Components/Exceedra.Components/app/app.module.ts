@@ -20,13 +20,14 @@ import { ExceedraLabelComponent } from './components/label.component/label.compo
 import { ExceedraMSDropdownComponent } from './components/msdropdown.component/msdropdown.component';
 import { ExceedraSSDropdownComponent } from './components/ssdropdown.component/ssdropdown.component';
 
-/* Example Building Component */
-import { XmlCoverterComponent } from './demo/xmlconverter.component/xmlconverter.component';
+/* Demo Components */
+import { XmlCoverterComponent } from './demo.components/xmlconverter.component/xmlconverter.component';
+import { MarkdownComponent } from './demo.components/markdown.component/markdown.component';
 
 /* Exceedra Component Demos */
-import { ExceedraTextboxBasicDemoComponent } from './demo/textbox/textbox.basic/textbox.basic.demo';
-import { ExceedraTextboxNumericDemoComponent } from './demo/textbox/textbox.numeric/textbox.numeric.demo';
-import { ExceedraTextboxMaskDemoComponent } from './demo/textbox/textbox.mask/textbox.mask.demo';
+import { ExceedraTextboxBasicDemoComponent } from './demos/textbox/textbox.basic/textbox.basic.demo';
+import { ExceedraTextboxNumericDemoComponent } from './demos/textbox/textbox.numeric/textbox.numeric.demo';
+import { ExceedraTextboxMaskDemoComponent } from './demos/textbox/textbox.mask/textbox.mask.demo';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { ExceedraTextboxMaskDemoComponent } from './demo/textbox/textbox.mask/te
         ExceedraSSDropdownComponent,
 
         XmlCoverterComponent,
+        MarkdownComponent,
 
         ExceedraTextboxBasicDemoComponent,
         ExceedraTextboxNumericDemoComponent,

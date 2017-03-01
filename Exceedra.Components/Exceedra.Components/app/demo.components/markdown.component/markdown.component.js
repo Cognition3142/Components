@@ -10,27 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ExceedraTextboxNumericDemoComponent = (function () {
-    function ExceedraTextboxNumericDemoComponent() {
-        this.initialSetup = {
-            value: 500.004,
-            format: 'n3',
-            min: undefined,
-            max: undefined
-        };
+var marked = require("marked");
+var MarkdownComponent = (function () {
+    function MarkdownComponent() {
     }
-    ExceedraTextboxNumericDemoComponent.prototype.ngOnInit = function () {
+    MarkdownComponent.prototype.ngOnInit = function () {
+        this.markdownHtml = marked.parse(this.markdownString);
     };
-    return ExceedraTextboxNumericDemoComponent;
+    return MarkdownComponent;
 }());
-ExceedraTextboxNumericDemoComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MarkdownComponent.prototype, "markdownString", void 0);
+MarkdownComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'exceedra-textbox-numeric-demo',
-        templateUrl: 'textbox.numeric.demo.html',
-        styleUrls: ['textbox.numeric.demo.css']
-    }),
-    __metadata("design:paramtypes", [])
-], ExceedraTextboxNumericDemoComponent);
-exports.ExceedraTextboxNumericDemoComponent = ExceedraTextboxNumericDemoComponent;
-//# sourceMappingURL=textbox.numeric.demo.js.map
+        selector: 'markdown',
+        templateUrl: 'markdown.component.html',
+        styleUrls: ['markdown.component.css'],
+        encapsulation: core_1.ViewEncapsulation.None,
+    })
+], MarkdownComponent);
+exports.MarkdownComponent = MarkdownComponent;
+//# sourceMappingURL=markdown.component.js.map

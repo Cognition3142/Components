@@ -14,10 +14,14 @@ var textbox_numeric_model_1 = require("../../../models/textbox/textbox.numeric.m
 var ExceedraTextboxNumericComponent = (function () {
     function ExceedraTextboxNumericComponent() {
     }
-    ExceedraTextboxNumericComponent.prototype.ngOnInit = function () {
-        //If min or max set, then autocorrect must be true.
-        if (this.setup.max || this.setup.min) {
-            this.autoCorrect = true;
+    ExceedraTextboxNumericComponent.prototype.ngOnChanges = function (changes) {
+        console.log(changes);
+        for (var name_1 in changes) {
+            if (name_1 === 'setup') {
+                if (this.setup.max || this.setup.min) {
+                    this.autoCorrect = true;
+                }
+            }
         }
     };
     return ExceedraTextboxNumericComponent;
@@ -32,8 +36,7 @@ ExceedraTextboxNumericComponent = __decorate([
         selector: 'exceedra-textbox-numeric',
         templateUrl: 'textbox.numeric.component.html',
         styleUrls: ['textbox.numeric.component.css'],
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], ExceedraTextboxNumericComponent);
 exports.ExceedraTextboxNumericComponent = ExceedraTextboxNumericComponent;
 //# sourceMappingURL=textbox.numeric.component.js.map

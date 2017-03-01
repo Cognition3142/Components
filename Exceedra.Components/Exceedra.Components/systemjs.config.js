@@ -32,8 +32,9 @@
             '@telerik/kendo-intl': 'npm:@telerik/kendo-intl/dist/npm',
             '@telerik/kendo-draggable': 'npm:@telerik/kendo-draggable/dist/npm',
             '@telerik/kendo-inputs-common': 'npm:@telerik/kendo-inputs-common/dist/npm',
-            '@progress/kendo-angular-inputs': 'npm:@progress/kendo-angular-inputs/dist/npm'
+            '@progress/kendo-angular-inputs': 'npm:@progress/kendo-angular-inputs/dist/npm',
 
+            'marked':'npm:marked/lib',
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -64,6 +65,7 @@
                 main: './main.js',
                 defaultExtension: 'js'
             },
+            'marked': { main: 'marked.js', defaultExtension: 'js' }
 
         }
     });

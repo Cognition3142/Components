@@ -1,4 +1,4 @@
-﻿import { Component, OnInit, Input } from '@angular/core';
+﻿import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 
 import {TextboxNumeric} from '../../../models/textbox/textbox.numeric.model';
 
@@ -9,23 +9,25 @@ import {TextboxNumeric} from '../../../models/textbox/textbox.numeric.model';
     styleUrls: ['textbox.numeric.component.css'],
 })
 
-export class ExceedraTextboxNumericComponent implements OnInit {
+export class ExceedraTextboxNumericComponent implements OnChanges {
 
     @Input()
     setup: TextboxNumeric;
 
     //Allows the control to override user input. True if min or max set.
-    public autoCorrect: boolean; 
+    public autoCorrect: boolean;
 
-    constructor() { }
-
-    ngOnInit(): void {
-
-        //If min or max set, then autocorrect must be true.
-        if (this.setup.max || this.setup.min) {
-            this.autoCorrect = true;
+    ngOnChanges(changes: SimpleChanges) {
+        console.log(changes);
+        for (let name in changes)
+        {
+            if (name === 'setup')
+            {
+                if (this.setup.max || this.setup.min) {
+                    this.autoCorrect = true;
+                }
+            }
         }
-
     }
 
 }
