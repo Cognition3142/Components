@@ -17,8 +17,6 @@ var ExceedraTextboxBasicComponent = (function () {
             value: ""
         };
     }
-    ExceedraTextboxBasicComponent.prototype.ngOnInit = function () {
-    };
     return ExceedraTextboxBasicComponent;
 }());
 __decorate([
@@ -31,8 +29,7 @@ ExceedraTextboxBasicComponent = __decorate([
         selector: 'exceedra-textbox-basic',
         templateUrl: 'textbox.basic.component.html',
         styleUrls: ['textbox.basic.component.css'],
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], ExceedraTextboxBasicComponent);
 exports.ExceedraTextboxBasicComponent = ExceedraTextboxBasicComponent;
 //# sourceMappingURL=textbox.basic.component.js.map

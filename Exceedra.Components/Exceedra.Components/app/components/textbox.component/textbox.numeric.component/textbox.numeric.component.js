@@ -12,17 +12,48 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var textbox_numeric_model_1 = require("../../../models/textbox/textbox.numeric.model");
 var ExceedraTextboxNumericComponent = (function () {
-    function ExceedraTextboxNumericComponent() {
+    function ExceedraTextboxNumericComponent(ref) {
+        this.ref = ref;
+        this.first = true;
     }
     ExceedraTextboxNumericComponent.prototype.ngOnChanges = function (changes) {
-        console.log(changes);
-        for (var name_1 in changes) {
-            if (name_1 === 'setup') {
-                if (this.setup.max || this.setup.min) {
-                    this.autoCorrect = true;
-                }
+        if (changes['setup']) {
+            this.setAutoCorrect();
+            this.forceChange(changes['setup']);
+        }
+    };
+    /**
+     * If min or max is set then we must autocorrect to enforce this.
+     * If not set then we would require additional validation.
+     */
+    ExceedraTextboxNumericComponent.prototype.setAutoCorrect = function () {
+        if (this.setup.max || this.setup.min) {
+            this.setup.autoCorrect = true;
+        }
+    };
+    /**
+     * In demo, if the user updates format but not value the control doesn't immediatly update.
+     * Here we invoke a value update to reflect this.
+     * @param change
+     */
+    ExceedraTextboxNumericComponent.prototype.forceChange = function (change) {
+        if (change.previousValue) {
+            if (this.hasOnlyFormatChanged(change)) {
+                var holdValue = this.setup.value;
+                this.setup.value = null;
+                this.ref.detectChanges();
+                this.setup.value = holdValue;
             }
         }
+    };
+    /**
+     * Check if the format has changed, but not the value
+     * For demo purpose only. In production, format would be set once.
+     * @param change : The old and new value.
+     */
+    ExceedraTextboxNumericComponent.prototype.hasOnlyFormatChanged = function (change) {
+        return change.currentValue.format != change.previousValue.format
+            && change.currentValue.value == change.previousValue.value;
     };
     return ExceedraTextboxNumericComponent;
 }());
@@ -36,7 +67,8 @@ ExceedraTextboxNumericComponent = __decorate([
         selector: 'exceedra-textbox-numeric',
         templateUrl: 'textbox.numeric.component.html',
         styleUrls: ['textbox.numeric.component.css'],
-    })
+    }),
+    __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
 ], ExceedraTextboxNumericComponent);
 exports.ExceedraTextboxNumericComponent = ExceedraTextboxNumericComponent;
 //# sourceMappingURL=textbox.numeric.component.js.map

@@ -23,6 +23,7 @@ export class ExceedraTextboxNumericDemoComponent {
 | format        | n0, c2: <a href="https://msdn.microsoft.com/en-us/library/dwhawy9k.aspx">More</a>   | Yes       | Format for value.        |
 | min           | Any number    | No        | Min. possible value.      |
 | max           | Any number    | No        | Max. possible value.      |
+| autoCorrect   | true, false   | No        | Overrides user entries    |
 
 `;
 
@@ -71,4 +72,31 @@ Here is a demo displaying the min and max setting. You may set only one if you l
         }
     }
 
+
+
+    /* Demo three... */
+
+    demoThreeMarkdownString: string =
+    `### Demo Three - Auto Correct
+---
+Auto Correct will modify a users input to match with the selected formats precision specifier (i.e. the number bit in the format).   
+If false then only the visual value will follow the format, but the underlying value will be what the user entered.   
+If true then the visual value and underlying value will always be equal.   
+In the example, the visual value is rounded to the formats precision. But click to edit the value and you can see the underlying precision.
+`;
+    demoThreeXmlIn: string = 'This is the xml in...';
+    demoThreeJsonOut: string = `{ "value": 500.55555, "format": "n2", "autoCorrect": false }`;
+    demoThreeModelInput: TextboxNumeric = <ITextboxNumeric>JSON.parse(this.demoThreeJsonOut);
+
+    jsonOutChangeThree(event: string) {
+        console.log("Got json out: " + event);
+
+        try {
+            this.demoThreeModelInput = <ITextboxNumeric>JSON.parse(event);
+        }
+        catch (e) {
+            console.log("JSON Parse Error:");
+            console.log(e);
+        }
+    }
 }

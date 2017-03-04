@@ -1,4 +1,4 @@
-﻿import { Component, OnInit, Input } from '@angular/core';
+﻿import { Component, Input } from '@angular/core';
 
 import {TextboxBasic} from '../../../models/textbox/textbox.basic.model';
 
@@ -9,18 +9,11 @@ import {TextboxBasic} from '../../../models/textbox/textbox.basic.model';
     styleUrls: ['textbox.basic.component.css'],
 })
 
-export class ExceedraTextboxBasicComponent implements OnInit {
+export class ExceedraTextboxBasicComponent {
 
     @Input()
     setup: TextboxBasic = {
         value: ""
     };
-
-    constructor() { }
-
-    ngOnInit(): void {
-
-
-    }
 
 }

@@ -3,6 +3,7 @@
     format: string;
     min: number;
     max: number;
+    autoCorrect: boolean;
 }
 
 export interface ITextboxNumeric {
@@ -10,4 +11,5 @@ export interface ITextboxNumeric {
     format: string;
     min: number;
     max: number;
+    autoCorrect: boolean;
 }
